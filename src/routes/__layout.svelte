@@ -2,7 +2,6 @@
 	import type { LoadInput } from '@sveltejs/kit/types/page';
 	export async function load(load_input: LoadInput) {
 		const { session } = load_input;
-		console.log(load_input);
 
 		return {
 			props: {
@@ -17,7 +16,6 @@
 
 	export let session;
 	let user = session.user;
-	console.log(session);
 </script>
 
 <Header {user} />
